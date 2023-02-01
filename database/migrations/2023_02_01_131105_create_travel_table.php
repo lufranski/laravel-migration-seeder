@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('travel', function (Blueprint $table) {
             $table->id();
+            $table->string('destination', 64)->nullable(false);
+            $table->float('price', 5, 2)->nullable(false)->unsigned();
+            $table->tinyText('period')->nullable(false);
+            
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table ->string('train_code', 10) -> nullable(false) -> unique();
             $table ->string('departing_from', 20) -> nullable(false);
             $table ->string('departing_to' , 20) -> nullable(false);
-            $table ->smallInteger('binary') -> nullable(false);
+            $table ->smallInteger('binary') -> nullable(false)->unsigned();
             $table ->dateTime('departing_date') -> nullable(false);
             $table ->smallInteger('wagons');
             
