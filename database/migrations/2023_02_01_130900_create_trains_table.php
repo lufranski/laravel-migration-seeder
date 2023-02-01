@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
+            $table ->string('train_code', 10) -> nullable(false) -> unique();
+            $table ->string('departing_from', 20) -> nullable(false);
+            $table ->string('departing_to' , 20) -> nullable(false);
+            $table ->smallInteger('binary') -> nullable(false);
+            $table ->dateTime('departing_date') -> nullable(false);
+            $table ->smallInteger('wagons');
+            
             $table->timestamps();
         });
     }
